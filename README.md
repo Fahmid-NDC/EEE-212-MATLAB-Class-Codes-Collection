@@ -1,8 +1,4 @@
 # EEE-212-MATLAB-Class-Codes-Collection  
-[Week-1](https://github.com/Fahmid-NDC/EEE-212-MATLAB-Class-Codes-Collection/#week-1)  
-[Week-2](https://github.com/Fahmid-NDC/EEE-212-MATLAB-Class-Codes-Collection/#week-2)  
-[Week-3](https://github.com/Fahmid-NDC/EEE-212-MATLAB-Class-Codes-Collection/#week-3)  
-[Week-4](https://github.com/Fahmid-NDC/EEE-212-MATLAB-Class-Codes-Collection/#week-4)  
 ## Week-1
 ```MATLAB
 1^1 Matrix 
