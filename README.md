@@ -1,5 +1,5 @@
 # EEE-212-MATLAB-Class-Codes-Collection  
-## Week-1
+## Week-1 (Incomplete, couldn't write many lines of code just like Ikrama Sir; missed the function part too)
 ```MATLAB
 1^1 Matrix 
 a = 5
