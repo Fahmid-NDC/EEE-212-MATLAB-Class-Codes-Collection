@@ -1,5 +1,5 @@
 # EEE-212-MATLAB-Class-Codes-Collection  
-## Week-1 (Incomplete, couldn't write many lines of code just like Ikrama Sir; missed the function part too)
+## Week-1: Week01__Introduction_to_MATLAB.m (Incomplete, couldn't write many lines of code just like Ikrama Sir; missed the function part too)
 ```MATLAB
 1^1 Matrix 
 a = 5
@@ -102,7 +102,7 @@ y=4;
 
 </br>
 
-## Week-2
+## Week-2: Week02__Newton_Raphson_Method.m
 ```MATLAB
 %Root of Non-Linear Equation: Newton Raphson Method
 %%
@@ -140,7 +140,7 @@ r = roots(p)
 
 </br>
 
-## Week-3
+## Week-3: Week03__False_Position_Method.m
 ```MATLAB
 %Solution of Non Linear Equation: False Position Method
 %%
@@ -182,7 +182,7 @@ r = roots(p)
 
 </br>
 
-## Week-4
+## Week-4: Week04__Interpolation.m
 ```MATLAB
 %{
 EECE 212 Interpolation, EI LAB theke at least 1 ta question thakbe in lab test out of 3, either forward or backward interpolation
@@ -271,7 +271,7 @@ ekhon ei interval er jonno value ber koro
 
 </br>
 
-## Week-6
+## Week-6: Week06__Curve_Fitting.m
 ```MATLAB
 clc
 clear
@@ -331,3 +331,211 @@ ylabel('y')
 legend('Original Data', 'Curve Fit', 'Location', 'best')
 title('Polynomial Curve Fitting')
 ```
+
+</br>
+
+## Week-8: Week08__Numerical_Integration.m
+```MATLAB
+%%
+%Trapezoid Rule
+clc
+clear all
+close all
+%%
+a=3;
+b=7;
+n=100;
+h=(b-a)/n;
+x=a:h:b;
+f= @(x)(x^3);
+result=0;
+result=result+f(a)+f(b);
+for i=2:length(x)-1
+    result=result+2*f(x(i));
+end
+result=0.5*h*result
+%%
+trapz(x,x.^3)
+
+
+%%
+%Simpson's 1/3rd Rule (Done by the Students themselves)
+a=3;
+b=7;
+n=100;
+h=(b-a)/n;
+x=a:h:b;
+f= @(x)(x^3);
+result=0;
+result=f(a)+f(b);
+for i=3:2:length(x)-1
+    result=result+2*f(x(i));
+end
+for i=2:2:length(x)-1
+    result=result+4*f(x(i));
+end
+result=(1/3)*h*result
+```
+
+</br>
+
+## Week-9: Week09__Differentiation__Class_Performance.m
+```MATLAB
+x=4:10;
+y=5*x.^3-4*x.^2+2*x+1;
+Week09FunctionNumericalDifferentiationClassPerformance202516000(x,y);
+```
+
+</br>
+
+## Week-9: Week09__Differentiation__Main_Code.m
+```MATLAB
+%%
+x=4:10;
+y=5*x.^3-4*x.^2+2*x+1;
+%%
+t=Week09FunctionDifferenceTable202516000(x,y)
+sum=0;
+h=x(2)-x(1);
+for i=1:length(x)-1
+    sum=sum+((-1)^(i+1))*t(1,i+2)/i;
+end
+sum=sum/h
+```
+
+</br>
+
+## Week-9: Week09FunctionDifferenceTable202516000.m
+```MATLAB
+function table = Week09FunctionDifferenceTable202516000(x,y)
+table=zeros(length(x),length(x)+1);
+table(:,1)=x;
+table(:,2)=y;
+d=length(x)-1;
+for j=3:length(x)+1
+   for i=1:d
+       table(i,j)=table(i+1,j-1)-table(i,j-1);
+   end
+   d=d-1;
+end
+end
+```
+
+</br>
+
+## Week-9: Week09FunctionNumericalDifferentiationClassPerformance202516000.m
+```MATLAB
+function sum = Week09FunctionNumericalDifferentiationClassPerformance202516000(x,y)
+t=Week09FunctionDifferenceTable202516000(x,y)
+sum=0;
+h=x(2)-x(1);
+for i=1:length(x)-1
+    sum=sum+((-1)^(i+1))*t(1,i+2)/i;
+end
+sum=sum/h
+end
+```
+
+</br>
+
+## Week-11: Week11__Gauss_Jordan_Elimination__Class_Performance.m
+```MATLAB
+clc
+clear all
+close all
+
+A= [0.15, -0.1, -0.05;
+    -0.1, 0.145, -0.025;
+    -0.05, -0.025, 0.075];
+b=[5, 0, 2];
+
+G=[A b'];
+
+n=length(A);
+
+
+for i=1:n
+    
+    if (G(i,i)==0)
+        
+        temp=G(i+1,:);
+        G(i+1,:)=G(i,:);
+        G(i,:)=temp;
+        
+    end
+    
+end
+
+
+
+for i=1:n
+    G(i,:)=G(i,:)/G(i,i);
+    
+    for j=1:n
+        
+        if j~=i
+           
+            G(j,:)=G(j,:)-(G(j,i)*G(i,:));
+        end
+        
+    end
+end
+
+G
+
+G(:,n+1)
+```
+
+</br>
+
+## Week-12: Week12__Gauss_Seidel_Method.m
+```MATLAB
+clc
+clear all
+close all
+
+
+%% Declare Matrix
+A=[9 2 3;1 12 9;4 6 14];
+b=[7 2 1];
+
+Ab=[A b'];
+ 
+%% Find Dimension of the Matrix
+[n1,n2]=size(Ab);
+
+%% Initialize  
+var = zeros(1,n1);
+var_old = zeros(1,n1);
+
+ 
+tolerance= 0.001;
+max_err= 5000;
+
+while (max_err>tolerance)
+
+    for i=1:n1
+        var_old(i)=var(i);
+        s=0;
+        for j=1:n1
+            
+            if(j~=i)
+             
+                s=s+Ab(i,j)*var(j);
+             
+            end
+                
+        end
+        var(i) = (Ab(i,end) -s)/Ab(i,i);
+        err(i) = abs(var(i)-var_old(i));
+    end
+    max_err= max(err)
+    
+end       
+
+var
+```
+
+</br>
+
+### All the above codes Alhamdulillah have been uploaded by me in Google Drive: [Codes Given in Class](https://drive.google.com/drive/folders/1wHJ88-FhqyoAIbyQq_UmVpV68Aym4PQf)
