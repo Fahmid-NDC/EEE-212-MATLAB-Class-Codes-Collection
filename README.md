@@ -1,5 +1,5 @@
 # EEE-212-MATLAB-Class-Codes-Collection  
-## Week-1: Week01__Introduction_to_MATLAB.m (Incomplete, couldn't write many lines of code just like Ikrama Sir; missed the function part too)
+## [Week-1](https://app.notion.com/p/1-Introduction-to-MATLAB-37e7da57849980639a0eca9969e1c9f2?pvs=25): Week01__Introduction_to_MATLAB.m (Incomplete, couldn't write many lines of code just like Ikrama Sir; missed the function part too)
 ```MATLAB
 1^1 Matrix 
 a = 5
@@ -102,7 +102,7 @@ y=4;
 
 </br>
 
-## Week-2: Week02__Newton_Raphson_Method.m
+## [Week-2](https://mesbahnaeem.notion.site/Root-of-Non-Linear-Equation-Newton-Raphson-Method-b0d1ea92202b4f34abfa331d4b5c1c67?pvs=25): Week02__Newton_Raphson_Method.m
 ```MATLAB
 %Root of Non-Linear Equation: Newton Raphson Method
 %%
@@ -140,7 +140,7 @@ r = roots(p)
 
 </br>
 
-## Week-3: Week03__False_Position_Method.m
+## [Week-3](https://mesbahnaeem.notion.site/Solution-of-Non-Linear-Equation-False-Position-Method-3555498bfee645d7af9b71995faa1b01?pvs=25): Week03__False_Position_Method.m
 ```MATLAB
 %Solution of Non Linear Equation: False Position Method
 %%
@@ -182,7 +182,7 @@ r = roots(p)
 
 </br>
 
-## Week-4: Week04__Interpolation.m
+## [Week-4](https://mesbahnaeem.notion.site/Interpolation-f78f7a315c5b4c73b90a4c2900d78adc?pvs=25): Week04__Interpolation.m
 ```MATLAB
 %{
 EECE 212 Interpolation, EI LAB theke at least 1 ta question thakbe in lab test out of 3, either forward or backward interpolation
@@ -271,7 +271,7 @@ ekhon ei interval er jonno value ber koro
 
 </br>
 
-## Week-6: Week06__Curve_Fitting.m
+## [Week-6](https://mesbahnaeem.notion.site/Curve-Fitting-53b57f97dba94357a2e913e8134d3dd8?pvs=25): Week06__Curve_Fitting.m
 ```MATLAB
 clc
 clear
@@ -334,7 +334,7 @@ title('Polynomial Curve Fitting')
 
 </br>
 
-## Week-8: Week08__Numerical_Integration.m
+## [Week-8](https://mesbahnaeem.notion.site/Numerical-Integration-194f7d7c7fcd43bba517fa217f529bba?pvs=25): Week08__Numerical_Integration.m
 ```MATLAB
 %%
 %Trapezoid Rule
@@ -379,7 +379,7 @@ result=(1/3)*h*result
 
 </br>
 
-## Week-9: Week09__Differentiation__Class_Performance.m
+## [Week-9](https://mesbahnaeem.notion.site/Differentiation-4d17b467fa0e4a61b536a1f48e30ede2?pvs=25): Week09__Differentiation__Class_Performance.m
 ```MATLAB
 x=4:10;
 y=5*x.^3-4*x.^2+2*x+1;
@@ -438,7 +438,7 @@ end
 
 </br>
 
-## Week-11: Week11__Gauss_Jordan_Elimination__Class_Performance.m
+## [Week-11](https://mesbahnaeem.notion.site/Gauss-Jordan-Elimination-1a2e5201bd2640449da73fbba5a33e8f?pvs=25): Week11__Gauss_Jordan_Elimination__Class_Performance.m
 ```MATLAB
 clc
 clear all
@@ -488,7 +488,7 @@ G(:,n+1)
 
 </br>
 
-## Week-12: Week12__Gauss_Seidel_Method.m
+## [Week-12](https://mesbahnaeem.notion.site/Gauss-Seidel-Method-306f3e144f7545bdb3d8ce15fa1c9fb4?pvs=25): Week12__Gauss_Seidel_Method.m
 ```MATLAB
 clc
 clear all
